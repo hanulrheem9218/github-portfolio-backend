@@ -8,7 +8,8 @@ import { GithubsyncModule } from './github-sync/githubsync.module';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot({envFilePath: ".env"}),MongooseModule.forRoot(process.env.MONGOOSE_URL), GithubsyncModule],
+  imports: [ConfigModule.forRoot({envFilePath: ".env", isGlobal: true }),
+            MongooseModule.forRoot(process.env.MONGOOSE_URL), GithubsyncModule],
   controllers: [AppController, GithubsyncController],
   providers: [AppService],
 })

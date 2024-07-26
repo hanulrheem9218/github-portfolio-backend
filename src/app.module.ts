@@ -4,7 +4,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GithubsyncController } from './github-sync/githubsync.controller';
-import { env } from 'process';
 import { GithubsyncModule } from './github-sync/githubsync.module';
 import { ConfigModule } from '@nestjs/config';
 
